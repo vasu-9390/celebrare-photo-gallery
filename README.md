@@ -1,42 +1,134 @@
 # Celebrare Photo Gallery
 
-A React + Vite + Tailwind CSS photo gallery assignment built from scratch.
+A responsive photo gallery web application built with **React, Vite, and Tailwind CSS** as part of the Celebrare Frontend React Intern pre-screening assignment.
 
-## Features
+## ✨ Features
 
-- Fetches 30 photos from the Picsum Photos API
-- Loading and error states
-- Responsive layout: 1 column on mobile, 2 on tablet, 4 on desktop
-- Live author-name search without additional API requests
-- Favourites managed with `useReducer`
-- Favourites persist in `localStorage`
-- `useFetchPhotos` custom hook
-- `useCallback` for the search handler and favourite action
-- `useMemo` for filtered photos
+- **Photo Gallery:** Fetches 30 photos from the Picsum Photos API.
+- **Loading State:** Displays a spinner while photos are loading.
+- **Error Handling:** Shows an error message if the API request fails.
+- **Responsive Design:** Displays four columns on desktop, two on tablet, and one on mobile.
+- **Live Search:** Filters photos by photographer name without making additional API requests.
+- **Favourites:** Add or remove photos using the heart button.
+- **Persistent Favourites:** Saves favourite photo IDs in browser `localStorage`.
+- **Custom Hook:** Uses `useFetchPhotos` to manage fetching, loading, and error states.
+- **Reducer State Management:** Uses React's `useReducer` to manage favourites.
+- **Performance Optimization:** Uses `useCallback` for event handlers and `useMemo` for filtered photo results.
 
-## Run locally
+## 🛠️ Tech Stack
 
-Requires Node.js and npm.
+- React
+- Vite
+- Tailwind CSS
+- JavaScript (ES Modules)
+- Lucide React
+- Picsum Photos API
+- Browser localStorage
+
+## 📁 Project Structure
+
+```text
+celebrare-gallery/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Gallery.jsx
+│   │   └── PhotoCard.jsx
+│   ├── hooks/
+│   │   └── useFetchPhotos.js
+│   ├── reducers/
+│   │   └── favoritesReducer.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/vasu-9390/celebrare-photo-gallery.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd celebrare-photo-gallery
+```
+
+### 3. Install dependencies
 
 ```bash
 npm install
+```
+
+### 4. Start the development server
+
+```bash
 npm run dev
 ```
 
-Open the local URL printed by Vite.
+Open the local URL displayed in your terminal.
 
-## Build check
+## 🖼️ API
+
+The application fetches photos from the Picsum Photos API:
+
+```text
+https://picsum.photos/v2/list?limit=30
+```
+
+The API provides photo information, including the photo ID, author, and image URLs.
+
+## 🧠 React Concepts Demonstrated
+
+- **useEffect:** Fetches photos when the custom hook mounts.
+- **Custom Hooks:** Separates API fetching logic from the gallery UI.
+- **useReducer:** Manages adding and removing favourite photos.
+- **useCallback:** Memoizes event handlers.
+- **useMemo:** Memoizes the filtered photo list.
+- **localStorage:** Persists favourites across browser refreshes.
+- **Conditional Rendering:** Displays loading, error, empty, and success states.
+
+## 🧪 Production Build
+
+To check whether the application builds successfully, run:
 
 ```bash
 npm run build
 ```
 
-## Before submitting
+To preview the production build locally, run:
 
-1. Test loading, search, favourites, and refresh persistence.
-2. Check the layout at mobile, tablet, and desktop widths.
-3. Push this project to a public GitHub repository.
-4. Record a 5-minute explanation of the app and code.
-5. Submit both links using the form shared by the recruiter.
+```bash
+npm run preview
+```
 
-Be sure you understand each part of the code and can explain it in your own words.
+## 📋 Assignment Submission
+
+This project was created for the Celebrare Frontend React Internship pre-screening assignment.
+
+- **GitHub Repository:** https://github.com/vasu-9390/celebrare-photo-gallery
+- **Screen Recording:** Add your recording link here after uploading it.
+- **Hardest Part:** Managing favourites with `useReducer` and persisting them in `localStorage` while keeping the gallery synchronized.
+
+## 👨‍💻 Author
+
+**Vasu Bandaru**
+
+GitHub: [@vasu-9390](https://github.com/vasu-9390)
+
+---
+
+Built with React and Tailwind CSS.
